@@ -10,6 +10,9 @@ const commentsSchema = new mongoose_1.Schema({
         type: Date,
         required: true,
     },
+    //https://mongoosejs.com/docs/populate.html
+    user: { type: mongoose_1.Schema.Types.ObjectId, ref: 'User' },
+    blog: { type: mongoose_1.Schema.Types.ObjectId, ref: 'Blog' },
 });
 exports.default = (0, mongoose_1.model)('Comment', commentsSchema);
-//# sourceMappingURL=comment.js.map
+//# sourceMappingURL=Comment.js.map

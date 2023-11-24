@@ -14,6 +14,9 @@ const blogSchema = new mongoose_1.Schema({
         type: Date,
         required: true,
     },
+    // https://mongoosejs.com/docs/populate.html
+    user: { type: mongoose_1.Schema.Types.ObjectId, ref: 'User' },
+    comments: [{ type: mongoose_1.Schema.Types.ObjectId, ref: 'Comment' }],
 });
 exports.default = (0, mongoose_1.model)('Blog', blogSchema);
-//# sourceMappingURL=blog.js.map
+//# sourceMappingURL=Blog.js.map

@@ -5,7 +5,7 @@ import {
   GraphQLNonNull,
 } from 'graphql';
 
-const UserType = new GraphQLObjectType({
+export const UserType = new GraphQLObjectType({
   name: 'userType',
   fields: () => ({
     id: { type: GraphQLNonNull(GraphQLID) },
@@ -15,7 +15,7 @@ const UserType = new GraphQLObjectType({
   }),
 });
 
-const blogType = new GraphQLObjectType({
+export const BlogType = new GraphQLObjectType({
   name: 'blogType',
   fields: () => ({
     id: { type: GraphQLNonNull(GraphQLID) },
@@ -25,7 +25,7 @@ const blogType = new GraphQLObjectType({
   }),
 });
 
-const CommentType = new GraphQLObjectType({
+export const CommentType = new GraphQLObjectType({
   name: 'CommentType',
   fields: () => ({
     id: { type: GraphQLNonNull(GraphQLID) },

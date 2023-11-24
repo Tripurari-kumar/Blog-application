@@ -16,6 +16,10 @@ const userSchema = new mongoose_1.Schema({
         required: true,
         minLength: 6,
     },
+    //forming the relation bwtween collections
+    // https://mongoosejs.com/docs/populate.html
+    blogs: [{ type: mongoose_1.Schema.Types.ObjectId, ref: 'Blog' }],
+    comments: [{ type: mongoose_1.Schema.Types.ObjectId, ref: 'Comment' }],
 });
 exports.default = (0, mongoose_1.model)('User', userSchema);
-//# sourceMappingURL=user.js.map
+//# sourceMappingURL=User.js.map

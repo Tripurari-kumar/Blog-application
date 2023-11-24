@@ -9,6 +9,9 @@ const commentsSchema = new Schema({
     type: Date,
     required: true,
   },
+  //https://mongoosejs.com/docs/populate.html
+  user: { type: Schema.Types.ObjectId, ref: 'User' },
+  blog: { type: Schema.Types.ObjectId, ref: 'Blog' },
 });
 
 export default model('Comment', commentsSchema);

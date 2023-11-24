@@ -13,6 +13,9 @@ const blogSchema: Schema = new Schema({
     type: Date,
     required: true,
   },
+  // https://mongoosejs.com/docs/populate.html
+  user: { type: Schema.Types.ObjectId, ref: 'User' },
+  comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
 });
 
 export default model('Blog', blogSchema);

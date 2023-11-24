@@ -15,6 +15,10 @@ const userSchema: Schema = new Schema({
     required: true,
     minLength: 6,
   },
+  //forming the relation bwtween collections
+  // https://mongoosejs.com/docs/populate.html
+  blogs: [{ type: Schema.Types.ObjectId, ref: 'Blog' }],
+  comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
 });
 
 export default model('User', userSchema);
